@@ -120,9 +120,6 @@ Edit `/src/styles/centro.css` root variables:
 - Tailwind CSS
 - Shadcn UI components
 
-## 🌐 Live Demo
-
-Visit: https://kerala-cycles.preview.emergentagent.com
 
 ## 📞 Contact Integration
 
