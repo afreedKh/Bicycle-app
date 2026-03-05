@@ -63,7 +63,7 @@ const CategoryCarousel = ({ products, onEnquire }) => {
                 : <div className="product-image-placeholder"><MessageCircle size={32} /></div>
               }
               <div className="product-overlay">
-                <button onClick={() => onEnquire(product.name)} className="btn-primary btn-small">
+                <button onClick={() => onEnquire(product)} className="btn-primary btn-small">
                   <MessageCircle size={16} />
                   Enquire Now
                 </button>
@@ -151,13 +151,12 @@ const ProductCategories = () => {
 
   const handleEnquire = (product) => {
   const lines = [
-    `🛍️ *Product Enquiry*`,
+    ` *Product Enquiry*`,
     ``,
-    `📦 *Name:* ${product.name}`,
-    `🏷️ *Category:* ${product.category}`,
-    `💰 *Price:* ${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(product.price)}`,
-    `📝 *Description:* ${product.description}`,
-    ...(product.imageUrl ? [`🖼️ *Image:* ${product.imageUrl}`] : []),
+    `*Name:* ${product.name}`,
+    `*Category:* ${product.category}`,
+    `*Price:* ${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(product.price)}`,
+    `*Description:* ${product.description}`,
     ``,
     `Hi! I'm interested in this product. Can you please share more details?`,
   ];
