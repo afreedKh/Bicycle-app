@@ -31,5 +31,6 @@ export default defineConfig({
         "**/coverage/**",
       ],
     },
+    port: 3000,
   },
 });

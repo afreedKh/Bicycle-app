@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import ProductCategories from '../components/ProductCategories';
@@ -11,6 +12,7 @@ import Footer from '../components/Footer';
 const Home = () => {
   return (
     <div className="home-page">
+      <Header />
       <HeroSection />
       <AboutSection />
       <ProductCategories />
