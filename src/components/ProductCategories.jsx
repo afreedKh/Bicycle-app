@@ -149,10 +149,21 @@ const ProductCategories = () => {
     fetchProducts();
   }, []);
 
-  const handleEnquire = (productName) => {
-    const message = `Hi! I'm interested in ${productName}. Can you provide more details?`;
-    window.open(`https://wa.me/9020300400?text=${encodeURIComponent(message)}`, '_blank');
-  };
+  const handleEnquire = (product) => {
+  const lines = [
+    `🛍️ *Product Enquiry*`,
+    ``,
+    `📦 *Name:* ${product.name}`,
+    `🏷️ *Category:* ${product.category}`,
+    `💰 *Price:* ${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(product.price)}`,
+    `📝 *Description:* ${product.description}`,
+    ...(product.imageUrl ? [`🖼️ *Image:* ${product.imageUrl}`] : []),
+    ``,
+    `Hi! I'm interested in this product. Can you please share more details?`,
+  ];
+  const message = lines.join('\n');
+  window.open(`https://wa.me/9020300400?text=${encodeURIComponent(message)}`, '_blank');
+};
 
   return (
     <section id="products" className="products-section">
